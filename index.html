@@ -5,8 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timed Code Quiz</title>
+    <link rel="stylesheet" href="./asset/style.css">
 </head>
 <body>
+    <header>
+        <div id="ViewScore">View High Score</div>
+        <div id="Time">Time: 0</div>
+    </header>
+    <div class="questionContainer">
+        <div id="Question">sample question</div>
+        <div class="ChoiseContainer">
+            <button class="Choise">choise1</button>
+            <button class="Choise">choise2</button>
+            <button class="Choise">choise3</button>
+            <button class="Choise">choise4</button>
+           
+        </div>
+        <div Class="Message">Message</div>
+    </div>
+    <div class="QuizEndContainer">
+        <h1>All done!</h1>
+        <div>Your Score is : <Span id="ScoreSpan">.</Span></div>
+        <form>
+            <div>Enter initials: <input class="initial" type="text" placeholder="intial"> <button id="InitailBtn"> Submit </button></div>
+            
+            
+
+        </form>
+    </div>
+    <div id="QuizStartContainer">
+        <h2>Cooding Quiz Challenge</h2>
+        <div>Try to answer the following code-releated questions within the time limit. Keep in mind that incorrect answers will penilize your score/time by ten seconds!</div>
+         <button id="StartQuizBtn">Start Quiz</button>
+    </div>
+    <div id="QuizRestartContainer">
+        <h2>High Scors</h2>
+         <div id="HighScoreDiv"></div>
+        <button id="GobackQuizBtn">Go Back</button>
+        <button id="ClearHScorBtn">Clear High Scors</button>
+    </div>
     
+    
+    <script src="./asset/script.js"></script>
 </body>
 </html>

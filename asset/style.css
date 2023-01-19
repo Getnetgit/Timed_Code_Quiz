@@ -1,0 +1,99 @@
+*{
+    margin: 0%;
+}
+body{
+    font-size: 115%;
+    /* display: flex;
+    flex-direction: column; */
+    border-style: solid;
+    margin: 2px;
+    height: calc(100vh - 10px);
+    border-radius: 8px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 5px;
+}
+
+.questionContainer{
+ padding: 0 10% 0 30%;
+
+}
+#Question{
+    font-size: 110%;
+    font-weight: bold;
+}
+.ChoiseContainer{
+    padding-left: 3px;
+}
+.Choise{
+ background-color: rgb(77, 18, 135);
+ color: aliceblue;
+ margin-top: 4px;
+ padding: 3px;
+ border-radius: 5px;
+ font-size: large;
+ display: block;
+ 
+}
+.Choise:hover{
+    background-color: rgb(159, 61, 146);
+}
+.Message {
+    width: 50%;
+    border-style: solid none none none;
+    margin-top: 10px;
+
+}
+
+.QuizEndContainer{
+    padding: 0 0 0 30%;
+}
+.QuizEndContainer h1{
+    margin: 0;
+}
+#InitailBtn{
+    background-color: blueviolet;
+    border-style: none;
+    color: aliceblue;
+    border-radius: 3px;
+    padding: 5px;
+}
+#InitailBtn:hover{
+    background-color: rgb(108, 59, 155);
+}
+#QuizStartContainer{
+    width:80%;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    padding-left: 20%;
+}
+#StartQuizBtn, #GobackQuizBtn,#ClearHScorBtn {
+    background-color: blueviolet;
+    border-style: none;
+    color: aliceblue;
+    border-radius: 3px;
+    padding: 5px;
+}
+#QuizRestartContainer{
+    width:80%;
+    display: block;
+    
+    box-sizing: border-box;
+    padding-left: 20%;
+}
+#QuizRestartContainer h2{
+
+}
+#HighScoreDiv{
+    width: 200px;
+    box-sizing: border-box;
+    height: 20px;
+    background-color: rgb(186, 202, 216);
+    margin-bottom: 5px;
+    border-radius: 2px;
+    margin-top: 3px;
+}
