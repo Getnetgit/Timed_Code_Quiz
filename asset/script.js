@@ -20,9 +20,9 @@ var clearHighScorBtn=document.querySelector("#ClearHScorBtn");
 var score=0;
 var TimeLeft=75;
 var QIndex=0;
-var quizEnd=0;
 var quizTimer=0;
 var scoreRecord=[];
+//quiz object with qution , choises adn anser arrays . 7 questins with 4 choises each are included
 var quiz={
   question:["Inside which HTML element do we put the JavaScript?","How to write an IF statement in JavaScript?","How does a FOR loop start?","Which operator is used to assign a value to a variable? ","A very useful tool used during develeopment and debugging for printing content to the debugger is:","String values must be enclosed within________ when being assigned to variables.","Arrays in JavaScript cam be used to store ___________."],
   choise1:["<script>","if i=5","for(i=0; i<=5)","-","JavaScript","commas", "numbers and strings"],
@@ -121,29 +121,34 @@ function renderScore(){
   }
 }
 switchPags(1);//Rendering game start page up on loading and refershing application.
+//Adding envent listener to quiz start button
 startQuizBtn.addEventListener("click",()=>{
-  
-  QIndex=0;
-  quizEnd=0;
+  //Reassigning variables every time quiz started
+  QIndex=0; 
   TimeLeft=75;
-  reorderQuestin();
-  renderQuestion(QIndex);
-  messageDiv.textContent="";
-  initialInput.value="";
-  switchPags(2);
+  reorderQuestin();//questions shuffeled here
+  renderQuestion(QIndex); //first questin rendered here 
+  messageDiv.textContent="";//correct or worong message initialized with none 
+  initialInput.value="";//initials imput will be cleared
+  switchPags(2);// content will be switched to questions page
   
   quizTimer = setInterval(function() {
     TimeLeft--;
-
+    console.log(TimeLeft, "timeleft1");//troublshooting -ve vlue
+    console.log((TimeLeft < 1) ,"test value");//for troubleshooting
     if(TimeLeft < 1 ) {
       clearInterval(quizTimer);
       scoreSpan.textContent=score;
       switchPags(3);
+      console.log(TimeLeft , "timeleft2");//for troubleshooting 
+      
     }
     timeDiv.textContent="Time: " + TimeLeft;
   }, 1000);
  
 });
+
+
 
 questionContainerDiv.addEventListener("click",(event)=> {
   var element=event.target;
@@ -211,6 +216,7 @@ gobackQuizBtn.addEventListener("click",()=>{
 })
 
 ViewHighScoreLink.addEventListener("click", ()=>{
+  clearInterval(quizTimer);//cleare timer if view high score clicked while quiz is running
   switchPags(4);
   renderScore();
 });

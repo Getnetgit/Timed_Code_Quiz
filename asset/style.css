@@ -1,22 +1,20 @@
 *{
     margin: 0%;
+    
 }
 body{
-    font-size: 115%;
-    /* display: flex;
-    flex-direction: column; */
     border-style: solid;
     margin: 2px;
     min-height:calc(100vh - 25px);
-    
     padding-bottom: 15px;
     border-radius: 8px;
+   
 }
 /* ===================================================== */
 header{
     display: flex;
     justify-content: space-between;
-    
+    font-size: 200%;
     padding: 5px;
 }
 #ViewScore{
@@ -36,6 +34,7 @@ header{
     text-align: center;
     box-sizing: border-box;
     padding-left: 20%;
+    font-size:150% ;
 }
 
 #StartQuizBtn, #GobackQuizBtn,#ClearHScorBtn {
@@ -44,6 +43,8 @@ header{
     color: aliceblue;
     border-radius: 3px;
     padding: 5px;
+    margin-bottom: 5px;
+    font-size:120% ;
 }
 #StartQuizBtn:hover, #GobackQuizBtn:hover,#ClearHScorBtn:hover {
     background-color: rgb(142, 86, 195);
@@ -53,11 +54,11 @@ header{
 /* ================================================== */
 #questionContainer{
  padding: 8% 20% 0 30%;
-
+ font-size: 150%;
 }
 
 #Question{
-    font-size: 110%;
+    /* font-size: 200%; */
     font-weight: bold;
 }
 .ChoiseContainer{
@@ -72,7 +73,7 @@ header{
  width: fit-content;
  min-width:100px ;
  border-radius: 5px;
- font-size: large;
+ font-size: 120%;
  display: block;
  
 }
@@ -89,6 +90,7 @@ header{
 #QuizEndContainer{
    
     padding: 10% 0 0vh calc((100% - 336px)/2);
+    font-size: 170%;
 }
 
 #QuizEndContainer h1{
@@ -100,6 +102,8 @@ header{
     color: aliceblue;
     border-radius: 3px;
     padding: 5px;
+    margin-top: 5px;
+    font-size:95%;
 }
 #InitailBtn:hover{
     background-color: rgb(108, 59, 155);
@@ -107,11 +111,15 @@ header{
 .initialMessage{
     color: red;
 }
+.initial {
+    font-size:95%;
+}
+
 /* =================================================*/
 #QuizRestartContainer{
    
     padding: 10vh 0 0vh calc((100% - 192px)/2);
-   
+    font-size: 170%;
 }
 #QuizRestartContainer h2{
 padding-top: 8%;
@@ -132,3 +140,34 @@ padding-top: 8%;
     display: none;
 }
 /* ======================================================*/
+
+@media screen and (max-width:620px) {
+    header{
+        font-size: 100%;   
+    }
+    #QuizStartContainer{
+      
+        font-size:100% ;
+    }
+    #questionContainer{
+        font-size: 100%;
+       }
+    .Choise{
+        font-size: 120%;
+    }
+    #QuizEndContainer{
+        font-size: 100%;
+    }
+    #InitailBtn{
+         font-size:95%;
+    }
+    .initial {
+        font-size:95%;
+    }
+    #QuizRestartContainer{
+        font-size: 100%;
+    }
+    #StartQuizBtn, #GobackQuizBtn,#ClearHScorBtn {
+        font-size:90% ;
+    }
+}
