@@ -121,7 +121,8 @@ function renderScore(){
   }
 }
 switchPags(1);//Rendering game start page up on loading and refershing application.
-//Adding envent listener to quiz start button
+
+//Adding envent listener to quiz start button .This will start timmer and render first question. Timer will stop and quiz end page will be on .
 startQuizBtn.addEventListener("click",()=>{
   //Reassigning variables every time quiz started
   QIndex=0; 
@@ -148,8 +149,7 @@ startQuizBtn.addEventListener("click",()=>{
  
 });
 
-
-
+//once first questin renderd , this will listen to each choise button , check for correctness , culculate score by subtracting 10sec every mistake and display result if timer runns out or question end . Then display quiz end page.
 questionContainerDiv.addEventListener("click",(event)=> {
   var element=event.target;
  
@@ -181,6 +181,7 @@ questionContainerDiv.addEventListener("click",(event)=> {
 
 });
 
+//Innitial submit button captures initial and save it in local storage along with scors
 initialSubmitBtn.addEventListener("click",(event)=>{
  event.preventDefault();
  scoreRecord=[];
@@ -196,27 +197,30 @@ initialSubmitBtn.addEventListener("click",(event)=>{
     }
     storeScors(inital);//store score with initial
   
-    switchPags(4);
-    renderScore();
+    switchPags(4);//got to high score page
+    renderScore();//render stord score in li elements 
   } else {
     initialInputMessage.textContent="Please enter initial!"
   }
  
 });
 
+//Clear stored scores on clear high sccore button cleicked.
 clearHighScorBtn.addEventListener("click",()=>{
   localStorage.removeItem("scoreRecord");
   highScoreList.innerHTML="";
 });
 
+//go back button will take us to quiz start page .
 gobackQuizBtn.addEventListener("click",()=>{
   TimeLeft=75;
   timeDiv.textContent="Time: " + TimeLeft;
- switchPags(1);
+ switchPags(1);//go to quiz start page 
 })
 
+//view high score link will take us to high scores page 
 ViewHighScoreLink.addEventListener("click", ()=>{
   clearInterval(quizTimer);//cleare timer if view high score clicked while quiz is running
-  switchPags(4);
-  renderScore();
+  switchPags(4);//go to high score page
+  renderScore(); //render stored score in li elements 
 });

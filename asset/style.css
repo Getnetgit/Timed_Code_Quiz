@@ -1,6 +1,5 @@
 *{
     margin: 0%;
-    
 }
 body{
     border-style: solid;
@@ -10,7 +9,7 @@ body{
     border-radius: 8px;
    
 }
-/* ===================================================== */
+/* =============== styling header section====================================== */
 header{
     display: flex;
     justify-content: space-between;
@@ -19,15 +18,13 @@ header{
 }
 #ViewScore{
     color: blue;
-    
 }
 #ViewScore:hover{
-    color: hotpink;
-    
+    color: hotpink; 
 }
 
 
-/* ===================================== */
+/* ======================= styling quiz start page ============== */
 #QuizStartContainer{
     padding-top: 10%;
     width:80%;
@@ -51,15 +48,14 @@ header{
     border-style: solid;
 }
 
-/* ================================================== */
+/* ===================== styling quistions display page ============================= */
 #questionContainer{
  padding: 8% 20% 0 30%;
  font-size: 150%;
 }
 
 #Question{
-    /* font-size: 200%; */
-    font-weight: bold;
+   font-weight: bold;
 }
 .ChoiseContainer{
     padding-left: 3px;
@@ -86,7 +82,7 @@ header{
     margin-top: 10px;
 
 }
-/* ================================================= */
+/* ========================Styling quiz end display page ========================= */
 #QuizEndContainer{
    
     padding: 10% 0 0vh calc((100% - 336px)/2);
@@ -115,7 +111,7 @@ header{
     font-size:95%;
 }
 
-/* =================================================*/
+/* ======================Styling high score display page  it has go back button to restart quiz===========================*/
 #QuizRestartContainer{
    
     padding: 10vh 0 0vh calc((100% - 192px)/2);
@@ -139,34 +135,26 @@ padding-top: 8%;
 .hide{
     display: none;
 }
-/* ======================================================*/
+/* ================= adjusting font for smaller screen=====================================*/
 
 @media screen and (max-width:620px) {
-    header{
-        font-size: 100%;   
-    }
-    #QuizStartContainer{
+ 
+    #QuizStartContainer, #questionContainer,  header, #QuizEndContainer,  #QuizRestartContainer{
       
         font-size:100% ;
     }
-    #questionContainer{
-        font-size: 100%;
-       }
+   
     .Choise{
         font-size: 120%;
     }
-    #QuizEndContainer{
-        font-size: 100%;
-    }
+  
     #InitailBtn{
          font-size:95%;
     }
     .initial {
         font-size:95%;
     }
-    #QuizRestartContainer{
-        font-size: 100%;
-    }
+   
     #StartQuizBtn, #GobackQuizBtn,#ClearHScorBtn {
         font-size:90% ;
     }
