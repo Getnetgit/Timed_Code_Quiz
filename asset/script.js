@@ -37,7 +37,7 @@ var quiz={
 //if id is 3 end of quiz content asking for initial will be displayed
 //if id is 4 high score content will be displayed
 
-function switchPags(id) {
+function switchPages(id) {
   if (id===1) {//Start quiz start page 
      headerEle.classList.remove("hide");
      quizStartContainerDiv.classList.remove("hide");
@@ -65,7 +65,7 @@ function switchPags(id) {
   }
 }
 //This function will be used to reorder or sheffule  the order of questions every time quiz is started .
-function reorderQuestin() {
+function reorderQuestion() {
   for (let i = 0; i < quiz.question.length; i++) {
     var j=Math.floor(Math.random()*(quiz.question.length-1));
     if (j!==i) {
@@ -120,17 +120,17 @@ function renderScore(){
     }
   }
 }
-switchPags(1);//Rendering game start page up on loading and refershing application.
+switchPages(1);//Rendering game start page up on loading and refershing application.
 startQuizBtn.addEventListener("click",()=>{
   
   QIndex=0;
   quizEnd=0;
   TimeLeft=75;
-  reorderQuestin();
+  reorderQuestion();
   renderQuestion(QIndex);
   messageDiv.textContent="";
   initialInput.value="";
-  switchPags(2);
+  switchPages(2);
   
   quizTimer = setInterval(function() {
     TimeLeft--;
@@ -138,7 +138,7 @@ startQuizBtn.addEventListener("click",()=>{
     if(TimeLeft < 1 ) {
       clearInterval(quizTimer);
       scoreSpan.textContent=score;
-      switchPags(3);
+      switchPages(3);
     }
     timeDiv.textContent="Time: " + TimeLeft;
   }, 1000);
@@ -166,7 +166,7 @@ questionContainerDiv.addEventListener("click",(event)=> {
     renderQuestion(QIndex);
   } else {
     score=TimeLeft;
-    switchPags(3);
+    switchPages(3);
     scoreSpan.textContent=score;
    
     clearInterval(quizTimer);
@@ -191,7 +191,7 @@ initialSubmitBtn.addEventListener("click",(event)=>{
     }
     storeScors(inital);//store score with initial
   
-    switchPags(4);
+    switchPages(4);
     renderScore();
   } else {
     initialInputMessage.textContent="Please enter initial!"
@@ -207,10 +207,10 @@ clearHighScorBtn.addEventListener("click",()=>{
 gobackQuizBtn.addEventListener("click",()=>{
   TimeLeft=75;
   timeDiv.textContent="Time: " + TimeLeft;
- switchPags(1);
+ switchPages(1);
 })
 
 ViewHighScoreLink.addEventListener("click", ()=>{
-  switchPags(4);
+  switchPages(4);
   renderScore();
 });
