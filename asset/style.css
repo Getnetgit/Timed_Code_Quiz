@@ -7,7 +7,9 @@ body{
     flex-direction: column; */
     border-style: solid;
     margin: 2px;
-     height: calc(100vh - 10px);
+    min-height:calc(100vh - 25px);
+    
+    padding-bottom: 15px;
     border-radius: 8px;
 }
 /* ===================================================== */
@@ -26,22 +28,15 @@ header{
     
 }
 
-/* This class will be dynamically created by javascripte to hide header */
-.headerHide{
-    display: none;
-}
+
 /* ===================================== */
-.QuizStartContainer{
+#QuizStartContainer{
     padding-top: 10%;
     width:80%;
     text-align: center;
     box-sizing: border-box;
     padding-left: 20%;
 }
-.QuizStartContainerHide {
-    display: none;
-}
-
 
 #StartQuizBtn, #GobackQuizBtn,#ClearHScorBtn {
     background-color: blueviolet;
@@ -56,15 +51,11 @@ header{
 }
 
 /* ================================================== */
-.questionContainer{
+#questionContainer{
  padding: 8% 20% 0 30%;
 
 }
-/* This class will be dynamically created by javascripte to hide questin container div*/
-.questionContainerHide{
-    display: none;
-   
-   }
+
 #Question{
     font-size: 110%;
     font-weight: bold;
@@ -76,8 +67,10 @@ header{
  background-color: rgb(77, 18, 135);
  color: aliceblue;
  margin-top: 4px;
- padding: 3px;
- width:150px;
+ padding: 3px 8px 3px 3px;
+ min-width:100x ;
+ width: fit-content;
+ min-width:100px ;
  border-radius: 5px;
  font-size: large;
  display: block;
@@ -93,16 +86,12 @@ header{
 
 }
 /* ================================================= */
-.QuizEndContainer{
+#QuizEndContainer{
    
     padding: 10% 0 0vh calc((100% - 336px)/2);
 }
-/* This class will be dynamically created by javascripte to hide  qiz end container  div*/
-.QuizEndContainerHide {
-    display:none;
-}
 
-.QuizEndContainer h1{
+#QuizEndContainer h1{
     margin: 0;
 }
 #InitailBtn{
@@ -119,28 +108,27 @@ header{
     color: red;
 }
 /* =================================================*/
-.QuizRestartContainer{
-    width:100%;
-    display: block;
-    box-sizing: border-box;
+#QuizRestartContainer{
+   
     padding: 10vh 0 0vh calc((100% - 192px)/2);
    
 }
-.QuizRestartContainer h2{
+#QuizRestartContainer h2{
 padding-top: 8%;
 }
 
-.QuizRestartContainerHide{
-display: none;
-}
 #HighScoreDiv{
     width: 200px;
-    min-height: 15px;
+    min-height: 22px;
     margin: auto 0 auto 0;
     box-sizing: border-box;
     background-color: rgb(186, 202, 216);
     margin-bottom: 5px;
     border-radius: 2px;
     margin-top: 3px;
+}
+/* This class will be created by JavaScript dynamically when there is a ndeed to hide content. */
+.hide{
+    display: none;
 }
 /* ======================================================*/
