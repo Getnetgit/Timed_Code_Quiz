@@ -9,17 +9,17 @@
 </head>
 <body>
     <header  >
-        <div id="ViewScore">View High Score</div>
+        <div id="ViewScore" data-display="1">View High Score</div>
         <div id="TimeDiv">Time: 0</div>
     </header>
 
-    <div class="QuizStartContainer" >
+    <div id="QuizStartContainer" >
         <h2>Coding Quiz Challenge</h2>
         <div>Try to answer the following code-releated questions within the time limit. Keep in mind that incorrect answers will penilize your score/time by ten seconds!</div>
          <button id="StartQuizBtn">Start Quiz</button>
     </div>
     
-    <div class="questionContainer questionContainerHide">
+    <div id="questionContainer">
         <div id="Question">sample question</div>
         <ol class="ChoiseContainer">
             <li class="Choise" data-index="0"></li>
@@ -31,7 +31,7 @@
         <div Class="Message"></div>
     </div>
 
-    <div class="QuizEndContainer QuizEndContainerHide">
+    <div id="QuizEndContainer">
         <h1>All done!</h1>
         <div>Your Score is : <Span id="ScoreSpan">.</Span></div>
         <form>
@@ -42,7 +42,7 @@
 
     
 
-    <div class="QuizRestartContainer QuizRestartContainerHide">
+    <div id="QuizRestartContainer">
         <h2>High Scors</h2>
          <ol id="HighScoreDiv">
             
