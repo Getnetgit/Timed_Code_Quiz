@@ -14,7 +14,7 @@ When timed code quiz   is loaded  quiz start section will be displayed which has
 Here is the link to published page https://getnetgit.github.io/Timed_Code_Quiz/ .
 
 
-[This demo vedio](./asset/media/Timed%20Code%20Quiz_Demo_Video.webm) shows the web application's appearance and functionality:
+[This demo vedio]([https://drive.google.com/file/d/1SdUQ_3BQvpcnd3TvpcKyq5WnLzQc7Xqy/view]) shows the web application's appearance and functionality:
 
 
 Timed quiz app pictures  for computer screan
